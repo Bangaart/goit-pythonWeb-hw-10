@@ -21,6 +21,10 @@
             <li>
                 <a href="{% url 'quote:add_quote' %}" role="button">Add new quote</a>
             </li>
+            <li><a href="{% url 'authors:details' %}" role="button">Look the list of authors</a></li>
+            <li>
+                <a href="{% url 'quote:quote_list' %}" role="button">View all quotes</a>
+            </li>
         </ul>
         {% else %}
         <p>Welcome, new user. Please log in or sign up</p>

@@ -9,6 +9,7 @@ from authors.models import Author
 class Tag(models.Model):
     name = models.CharField(max_length=50)
     user = models.ForeignKey(User, on_delete=models.CASCADE, default=1)
+    counter = models.IntegerField(default=0)
 
     class Meta:
         constraints = [models.UniqueConstraint(fields=['name', 'user'], name='unique_tag')]

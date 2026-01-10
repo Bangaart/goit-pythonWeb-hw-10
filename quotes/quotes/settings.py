@@ -136,3 +136,5 @@ DATE_INPUT_FORMATS = [
     "%d %B %Y",  # '25 October 2006'
     "%d %B, %Y",  # '25 October, 2006'
 ]
+
+DJANGO_SETTINGS_MODULE = 'quotes.settings'

@@ -4,10 +4,19 @@
 
 
 {% for quote in quote_list %}
+
 <div style="border: 1px solid black; padding: 10px; margin: 20px; border-radius: 5px; border-width: 3px;">
     <p><i>"{{ quote.quote}}"</i></p>
     <p>by {{ quote.author }} (<a href="{% url 'authors:authorPage' quote.author.id %}">about</a>)</p>
     <p>Tags: {{ quote.tags|load_tags }}</p>
 </div>
 {% endfor %}
+<div>
+    <h1>Top Ten Tags </h1>
+    {% for tag in top_tags %}
+    <ul>
+        <li>{{ tag.name }}</li>
+    </ul>
+    {% endfor %}
+</div>
 {% endblock %}
