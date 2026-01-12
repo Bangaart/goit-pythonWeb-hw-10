@@ -24,8 +24,6 @@ SECRET_KEY = "django-insecure-gh#yuw5ke&+cj1k!$q%@)ciq8f3tp-mm^cw41w+f_sqqtp#xwr
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
-
 # Application definition
 
 INSTALLED_APPS = [
@@ -76,7 +74,7 @@ WSGI_APPLICATION = "quotes.wsgi.application"
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.postgresql",
-        "NAME": "quotes",
+        "NAME": "quotes-which-scrapped",
         "USER": "admin",
         "PASSWORD": "1234",
         "HOST": "127.0.0.1",

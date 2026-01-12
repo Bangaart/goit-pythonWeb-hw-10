@@ -10,6 +10,11 @@
     <p>by {{ quote.author }} (<a href="{% url 'authors:authorPage' quote.author.id %}">about</a>)</p>
     <p>Tags: {{ quote.tags|load_tags }}</p>
 </div>
+{% empty %}
+<form method="post" action="{% url 'quote:fill_database' %}">
+    {% csrf_token %}
+    <input type="submit" value="Fill Database">
+</form>
 {% endfor %}
 <div>
     <h1>Top Ten Tags </h1>
