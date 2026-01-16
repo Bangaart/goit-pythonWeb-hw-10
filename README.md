@@ -23,7 +23,7 @@ Django web application for storing, adding and displaying quotes and their autho
 ## How to run the project
 
 - run command "docker compose up --build" in docker from the folder where project located
-- open "http://127.0.0.1:8000" in your browser
+- open "http://127.0.0.1:8000" in your browser.
 - than there are two ways how to fill data:
 - 1 -http://127.0.0.1:8000/quotes/quotes-list - on this link there will be a button "Fill database". It scraps in real
   time this site https://quotes.toscrape.com and takes all info from it. Execution takes a time ~1 minute
@@ -31,6 +31,7 @@ Django web application for storing, adding and displaying quotes and their autho
   migration_script" or
   via docker UX you can open EXEC tub inside quotes_web container and run python manage.py migration_script. This script
   starts migration data from MongoDB to Postgres
+- all this 2 ways creates a superuser (username: admin, password: admin)
 
 ## Project Structure
 
